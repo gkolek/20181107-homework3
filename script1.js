@@ -27,7 +27,8 @@ var calendar = ('Hello! Today is ' +
         '.' + month +
         '.' + year +
         ' ' + hours +
-        ':' + minutes);
+        ':' + minutes) +
+        '.';
 
 console.log(calendar);
 
