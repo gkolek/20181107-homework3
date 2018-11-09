@@ -1,11 +1,11 @@
 // function myFunction() {
 var pesel = prompt("Wprowadź PESEL", "11 cyfr");
-if (pesel != null && pesel.length === 11) {
+if (pesel !== null && pesel.length === 11) {
 }
+
 else {
     alert('Błedna długość! Wprowadź prawidłowy PESEL o długości 11 cyfr!');
-}
-// }
+}// }
 
 
 var p1 = pesel[0];
@@ -52,11 +52,20 @@ var contSum = 10 - contSum;
 var contSum = contSum % 10;
 console.log('suma kontrolna = ' + contSum);
 
+
+
+
+
 if (p11 == contSum) {
     console.log(pesel + ' jest prawidłowym numerem PESEL');
-    alert(pesel + ' jest prawidłowym numerem PESEL');
+    // alert(pesel + ' jest prawidłowym numerem PESEL');
+    document.getElementById("pesel").innerHTML = (pesel + ' jest prawidłowym numerem PESEL');
+
 } else {
     console.log(pesel + ' nie jest prawidłowym numerem PESEL');
     alert(pesel + ' nie jest prawidłowym numerem PESEL');
+    // document.getElementById("pesel").innerHTML = (pesel + ' nie jest prawidłowym numerem PESEL');
 }
+
+
 
