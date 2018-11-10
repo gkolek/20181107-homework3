@@ -67,5 +67,3 @@ if (p11 == contSum) {
     // document.getElementById("pesel").innerHTML = (pesel + ' nie jest prawidłowym numerem PESEL');
 }
 
-
-
