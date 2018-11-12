@@ -3,3 +3,4 @@ console.log(array);
 
 console.log(Math.min(...array));
 console.log(Math.max(...array));
+
