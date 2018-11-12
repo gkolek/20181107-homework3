@@ -47,16 +47,14 @@ var contSum = 10 - contSum;
 var contSum = contSum % 10;
 console.log('suma kontrolna = ' + contSum);
 
-
-if (pesel == null || pesel.length !== 11) {
-    console.log('Błedna długość! Wprowadź prawidłowy PESEL o długości 11 cyfr!');
-    alert('Błedna długość! Odśwież stronę (F5) i wprowadź prawidłowy PESEL o długości 11 cyfr!');
-} else if (p11 == contSum) {
-    console.log(pesel + ' jest prawidłowym numerem PESEL');
-    alert(pesel + ' jest prawidłowym numerem PESEL');
+if (pesel != null && pesel.length === 11) {
+    if (p11 == contSum) {
+        console.log(pesel + ' jest prawidłowym numerem PESEL');
+        alert(pesel + ' jest prawidłowym numerem PESEL');
+    } else {
+        console.log(pesel + ' nie jest prawidłowym numerem PESEL');
+        alert(pesel + ' nie jest prawidłowym numerem PESEL');
+    }
 } else {
-    console.log(pesel + ' nie jest prawidłowym numerem PESEL');
-    alert(pesel + ' nie jest prawidłowym numerem PESEL');
+    alert('Błedna długość! Odśwież stronę (F5) i wprowadź prawidłowy PESEL o długości 11 cyfr!');
 }
-
-
