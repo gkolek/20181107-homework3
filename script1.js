@@ -1,17 +1,20 @@
-var date = new Date(2018, 11, 1, 12, 30);
+var date = new Date(2018, 10, 1, 12, 30);
+// var date = new Date();
 
 var day = date.getDate();
-var month = date.getMonth();
+var month = date.getMonth() + 1;
 var year = date.getFullYear();
 var hours = date.getHours();
 var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+var miliseconds = date.getMilliseconds();
 
 if (day < 10) {
         day = '0' + day;
 }
 
 if (month < 10) {
-        month = '0' + (month + 1);
+        month = '0' + (month);
 }
 
 if (hours < 10) {
@@ -22,20 +25,31 @@ if (minutes < 10) {
         minutes = '0' + minutes;
 }
 
-var calendar = ('Hello! Today is ' +
-        day +
-        '.' + month +
-        '.' + year +
-        ' ' + hours +
-        ':' + minutes) +
-        '.';
+if (seconds < 10) {
+        seconds = '0' + seconds;
+}
 
-console.log(calendar);
+var calendar = (
+        day + '.' +
+        month + '.' +
+        year + ' ' +
+        hours + ':' +
+        minutes) + '.';
 
-document.getElementById("hello").innerHTML = (calendar);
+var clock = (
+        hours + ':' +
+        minutes + ':' +
+        seconds);
 
-// function myFunction() {
-//         document.getElementById("hello").innerHTML = (calendar);
-//         ;
-// }
+var timer = (
+        hours + ':' +
+        minutes + ':' +
+        seconds + ':' +
+        miliseconds);
+
+console.log('Hello! Today is ' + calendar);
+document.getElementById("hello").innerHTML = ('Hello! Today is ' + calendar);
+
+// console.log('Hello! It is ' + clock);
+// document.getElementById("time").innerHTML = (clock);
 
