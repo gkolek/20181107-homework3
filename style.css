@@ -1,0 +1,38 @@
+body{
+    background-color: #eee;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wrapper{
+    display:flex; 
+    background-color: red;
+    border: red 1px solid;
+    border-radius: 5px;
+    /* justify-content:center; 
+    align-items:center;  */
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+}
+
+.wrapper div{
+    line-height: 80px;
+    margin: 0 2px;
+}
+
+[id *="fig"] {
+    flex-direction: row;
+    background-color: #222;
+    border-radius: 5px;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    width: 40px;
+    height: 80px;
+    text-align: center;
+}
+
+.wrapper :nth-child(3n){
+    color: #222;
+    /* background-color: yellow; */
+}
