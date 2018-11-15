@@ -5,14 +5,10 @@ body{
 
 .wrapper{
     display:flex; 
-    background-color: red;
-    border: red 1px solid;
-    border-radius: 5px;
-    /* justify-content:center; 
-    align-items:center;  */
-    position: absolute;
-    top: 50%; 
-    left: 50%;
+    justify-content:center; 
+    align-items:center; 
+    width: 100vw; 
+	height: 100vh;
 }
 
 .wrapper div{
@@ -34,5 +30,4 @@ body{
 
 .wrapper :nth-child(3n){
     color: #222;
-    /* background-color: yellow; */
 }

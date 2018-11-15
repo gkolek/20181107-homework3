@@ -1,33 +1,22 @@
 
-// var myVar = setInterval(myTimer, 1000);
-// function myTimer() {
-//         var date = new Date();
-//         var timer = date.toLocaleTimeString();
-//         document.getElementById("clock").innerHTML = timer;
-// }
-
-// var hours = timer.getHours();
-// var minutes = timer.getMinutes();
-// console.log(hours);
-// console.log(minutes);
-
-var myVar = setInterval(myTimerH, 1000);
-function myTimerH() {
+var setTime = setInterval(myTimer, 1000);
+function myTimer() {
         var date = new Date();
         var hours = date.getHours();
-        document.getElementById("fig2").innerHTML = hours;
-}
-
-var myVar = setInterval(myTimerM, 1000);
-function myTimerM() {
-        var date = new Date();
         var minutes = date.getMinutes();
-        document.getElementById("fig4").innerHTML = minutes;
+        var seconds = date.getSeconds();
+        var hourTen = Math.floor(hours / 10);
+        var hourUnit = hours % 10;
+        var minuteTen = Math.floor(minutes / 10);
+        var minuteUnit = minutes % 10;
+        var secondTen = Math.floor(seconds / 10);
+        var secondUnit = seconds % 10;
+        document.getElementById("fig1").innerHTML = hourTen;
+        document.getElementById("fig2").innerHTML = hourUnit;
+        document.getElementById("fig3").innerHTML = minuteTen;
+        document.getElementById("fig4").innerHTML = minuteUnit;
+        document.getElementById("fig5").innerHTML = secondTen;
+        document.getElementById("fig6").innerHTML = secondUnit;
 }
 
-var myVar = setInterval(myTimerS, 1000);
-function myTimerS() {
-        var date = new Date();
-        var seconds = date.getSeconds();
-        document.getElementById("fig6").innerHTML = seconds;
-}
+
